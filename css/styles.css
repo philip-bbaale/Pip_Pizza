@@ -6,3 +6,8 @@
     color: white;
     background-color:  #ffa64d ;
 }
+.background{
+    height: 200px;
+    width: auto;
+    background-image: url(../images/pizzabg3.jpg);
+}

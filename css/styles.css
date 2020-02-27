@@ -1,6 +1,8 @@
 .logo{
     height: auto;
     width: auto;
-    padding: 20px;
-    background-color: brown;
+    padding: 10px;
+    font-family: 'Monoton';
+    color: white;
+    background-color:  #ffa64d ;
 }

@@ -2,12 +2,30 @@
     height: auto;
     width: auto;
     padding: 10px;
+    padding-left: 50px;
     font-family: 'Monoton';
     color: white;
     background-color:  #ffa64d ;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .background{
-    height: 200px;
+    height: 250px;
     width: auto;
     background-image: url(../images/pizzabg3.jpg);
+}
+.moto{
+    height: auto;
+    width: auto;
+    padding:10px;
+    padding-left: 50px;
+    font-weight: bold;
+    background-color:  #f2f2f2 ;
+}
+#m1{
+    font-family: 'Anton';
+}
+#m2{
+    font-family: 'Fredoka One';
 }

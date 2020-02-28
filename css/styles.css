@@ -44,7 +44,7 @@
 .selection_form h4{
     font-family: 'Fredoka One';
 }
-input[type=radio]{
+input[type=radio],input[type=checkbox]{
     transform:scale(1.5);
 }
 .form-check-inline{

@@ -1,4 +1,4 @@
-var sizePrice, crustPrice, toppingPrice;
+var sizePrice, crustPrice, toppingPrice ;
 
 function sizeSelect(size){
     this.size=size;
@@ -12,6 +12,15 @@ function toppingSelect(topping){
     this.topping=topping;
 }
 
+function pizzaNumberSelect(pieces){
+    this.pieces=pieces;
+}
+
+function finalPrice(finalPrice){
+    this.finalPrice = sizeSelect()+crustSelect()+toppingSelect()*pizzaNumberSelect();
+    return finalPrice;
+}
+
 $(document).ready(function(){
 
 
@@ -19,15 +28,12 @@ $(document).ready(function(){
        var selectedSize = $("input[name='size']:checked").val();
        if(selectedSize=='small'){
         sizePrice = 250;
-           alert(selectedSize+" "+sizePrice);
         }
         else if(selectedSize=='medium'){
             sizePrice = 500;
-            alert(selectedSize+sizePrice);
          }
          else if(selectedSize=='large'){
             sizePrice = 1000;
-            alert(selectedSize+sizePrice);
          }
          size=selectedSize;
          console.log(size);
@@ -38,27 +44,21 @@ $(document).ready(function(){
         var selectedCrust = $("input[name='crust']:checked").val();
         if(selectedCrust=='thin'){
             crustPrice = 12;
-            alert(selectedCrust+crustPrice);
         }
         else if(selectedCrust=='thick'){
             crustPrice = 30;
-            alert(selectedCrust+crustPrice);
         }
         else if(selectedCrust=='stuffed'){
             crustPrice = 35;
-            alert(selectedCrust+crustPrice);
         }
         else if(selectedCrust=='crispy'){
             crustPrice = 20;
-            alert(selectedCrust+crustPrice);
         }
         else if(selectedCrust=='cheese'){
             crustPrice = 25;
-            alert(selectedCrust+crustPrice);
         }
         else if(selectedCrust=='gluten'){
             crustPrice = 35;
-            alert(selectedCrust+crustPrice);
         }
         crust=selectedCrust;
         console.log(crust);
@@ -69,44 +69,43 @@ $(document).ready(function(){
         var selectedTopping = $("input[name='topping']:checked").val();
         if(selectedTopping=='pepperoni'){
             toppingPrice = 100;
-            alert(selectedTopping+toppingPrice);
         }
         else if(selectedTopping=='mushrooms'){
             toppingPrice = 75;
-            alert(selectedTopping+toppingPrice);
         }
         else if(selectedTopping=='onions'){
             toppingPrice = 50;
-            alert(selectedTopping+toppingPrice);
         }
         else if(selectedTopping=='sausage'){
             toppingPrice = 95;
-            alert(selectedTopping+toppingPrice);
         }
         else if(selectedTopping=='bacon'){
             toppingPrice = 110;
-            alert(selectedTopping+toppingPrice);
         }
         else if(selectedTopping=='extra_cheese'){
             toppingPrice = 50;
-            alert(selectedTopping+toppingPrice);
         }
         else if(selectedTopping=='black_olives'){
             toppingPrice = 80;
-            alert(selectedTopping+toppingPrice);
         }
         else if(selectedTopping=='pineapple'){
             toppingPrice = 75;
-            alert(selectedTopping+toppingPrice);
         }
         else if(selectedTopping=='green_peppers'){
             toppingPrice = 65;
-            alert(selectedTopping+toppingPrice);
         }
         else if(selectedTopping=='spinach'){
             toppingPrice = 60;
-            alert(selectedTopping+toppingPrice);
         }
         topping=selectedTopping;
     });
+
+
+    $("input[type='number']").inputSpinner();
+    $(".pizza_number").click(function(){
+        var slelctedPizzaNumber = $("input[type='number']").inputSpinner().val();
+        pieces=slelctedPizzaNumber;
+    });
+    
+    $("#price_show1").text(finalPrice());
 });

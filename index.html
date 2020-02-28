@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap-input-spinner.js"></script>
     <script src="js/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Anton|Dancing+Script|Fredoka+One|Luckiest+Guy|Monoton&display=swap" rel="stylesheet">
 </head>
@@ -14,8 +15,11 @@
     <div class="container-fluid">
 
         <div class="row logo">
-            <div class="col-md-12 navbar-fixed-top">
+            <div class="col-md-8 navbar-fixed-top">
                 <h1 class="display-6">PIP PIZZA</h1>
+            </div>
+            <div class="col-md-4 price_show">
+                <h3>Total Price. KCS: <span id="price_show1"></span></h3>
             </div>
         </div>
 
@@ -28,7 +32,6 @@
                 <h2 id="m1">Pip Pizza.</h2>
                 <h4 id="m2">&nbsp best pizza, best value</h4>
             </div>
-
         </div>
 
         <div class="row selection_form">
@@ -164,10 +167,14 @@
                         </label>
                       </div>
                       
+
+
+                      <h4>How many would you like.</h4><br>
+                      <input class="col-md-3 pizza_number" type="number" value="1" min="0" max="10" />
                 </form>
                 
             </div>
-
+            
         </div>
     </div>
 </body>

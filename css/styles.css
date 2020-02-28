@@ -3,13 +3,15 @@
     width: auto;
     padding: 10px;
     padding-left: 50px;
-    font-family: 'Monoton';
     color: white;
     background-color:  #ffa64d ;
     position: fixed;
     z-index: 10;
     top: 0;
     width: 100%;
+}
+.logo h1{
+    font-family: 'Monoton';
 }
 .background{
     height: 250px;
@@ -51,4 +53,11 @@ input[type=radio],input[type=checkbox]{
 .form-check-inline{
     padding: 20px;
     padding-left: 50px;
+}
+.price_show{
+    height: auto;
+    width: auto;
+    padding: 5px;
+    text-align: center;
+    float: right;
 }

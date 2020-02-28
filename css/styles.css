@@ -44,3 +44,10 @@
 .selection_form h4{
     font-family: 'Fredoka One';
 }
+input[type=radio]{
+    transform:scale(1.5);
+}
+.form-check-inline{
+    padding: 20px;
+    padding-left: 50px;
+}

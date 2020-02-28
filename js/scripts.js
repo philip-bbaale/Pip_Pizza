@@ -16,8 +16,8 @@ function pizzaNumberSelect(pieces){
     this.pieces=pieces;
 }
 
-function finalPrice(finalPrice){
-    this.finalPrice = sizeSelect()+crustSelect()+toppingSelect()*pizzaNumberSelect();
+function finalPrice(){
+    var finalPrice = sizeSelect()+crustSelect()+toppingSelect()*pizzaNumberSelect();
     return finalPrice;
 }
 
@@ -98,6 +98,7 @@ $(document).ready(function(){
             toppingPrice = 60;
         }
         topping=selectedTopping;
+        console.log(topping);
     });
 
 
@@ -105,7 +106,10 @@ $(document).ready(function(){
     $(".pizza_number").click(function(){
         var slelctedPizzaNumber = $("input[type='number']").inputSpinner().val();
         pieces=slelctedPizzaNumber;
+        console.log(pieces);
     });
     
     $("#price_show1").text(finalPrice());
+
+
 });

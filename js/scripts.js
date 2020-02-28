@@ -1,4 +1,4 @@
-var sizePrice;
+var sizePrice, crustPrice;
 function sizeSelect(size){
     this.size=size;
 }

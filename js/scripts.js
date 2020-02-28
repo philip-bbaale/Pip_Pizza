@@ -1,4 +1,4 @@
-var sizePrice, crustPrice;
+var sizePrice, crustPrice, toppingPrice;
 
 function sizeSelect(size){
     this.size=size;
@@ -66,6 +66,47 @@ $(document).ready(function(){
 
 
     $(".check_topping").click(function(){
-
+        var selectedTopping = $("input[name='topping']:checked").val();
+        if(selectedTopping=='pepperoni'){
+            toppingPrice = 100;
+            alert(selectedTopping+toppingPrice);
+        }
+        else if(selectedTopping=='mushrooms'){
+            toppingPrice = 75;
+            alert(selectedTopping+toppingPrice);
+        }
+        else if(selectedTopping=='onions'){
+            toppingPrice = 50;
+            alert(selectedTopping+toppingPrice);
+        }
+        else if(selectedTopping=='sausage'){
+            toppingPrice = 95;
+            alert(selectedTopping+toppingPrice);
+        }
+        else if(selectedTopping=='bacon'){
+            toppingPrice = 110;
+            alert(selectedTopping+toppingPrice);
+        }
+        else if(selectedTopping=='extra_cheese'){
+            toppingPrice = 50;
+            alert(selectedTopping+toppingPrice);
+        }
+        else if(selectedTopping=='black_olives'){
+            toppingPrice = 80;
+            alert(selectedTopping+toppingPrice);
+        }
+        else if(selectedTopping=='pineapple'){
+            toppingPrice = 75;
+            alert(selectedTopping+toppingPrice);
+        }
+        else if(selectedTopping=='green_peppers'){
+            toppingPrice = 65;
+            alert(selectedTopping+toppingPrice);
+        }
+        else if(selectedTopping=='spinach'){
+            toppingPrice = 60;
+            alert(selectedTopping+toppingPrice);
+        }
+        topping=selectedTopping;
     });
 });

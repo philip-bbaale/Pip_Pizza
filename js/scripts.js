@@ -8,6 +8,10 @@ function crustSelect(crust){
     this.crust=crust;
 }
 
+function toppingSelect(topping){
+    this.topping=topping;
+}
+
 $(document).ready(function(){
 
 
@@ -58,6 +62,10 @@ $(document).ready(function(){
         }
         crust=selectedCrust;
         console.log(crust);
+    });
+
+
+    $(".check_topping").click(function(){
 
     });
 });

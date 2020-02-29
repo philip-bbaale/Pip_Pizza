@@ -35,7 +35,8 @@ $(document).ready(function(){
          else if(selectedSize=='large'){
             sizePrice = 1000;
          }
-         size=selectedSize;
+         size = sizePrice;
+         $("#price_show1").text(size);
          console.log(size);
    });
 
@@ -60,7 +61,8 @@ $(document).ready(function(){
         else if(selectedCrust=='gluten'){
             crustPrice = 35;
         }
-        crust=selectedCrust;
+        crust = crustPrice;
+        $("#price_show1").text(size+crust);
         console.log(crust);
     });
 
@@ -97,19 +99,17 @@ $(document).ready(function(){
         else if(selectedTopping=='spinach'){
             toppingPrice = 60;
         }
-        topping=selectedTopping;
+        topping = toppingPrice;
+        $("#price_show1").text(size+crust+topping);
         console.log(topping);
     });
 
 
-    $("input[type='number']").inputSpinner();
-    $(".pizza_number").click(function(){
-        var slelctedPizzaNumber = $("input[type='number']").inputSpinner().val();
-        pieces=slelctedPizzaNumber;
+    $("#pizza_number").change(function(){
+        var slelectedPizzaNumber = $("#pizza_number").val();
+        pieces = slelectedPizzaNumber;
+        $("#price_show1").text((size+crust+topping)*pieces);
         console.log(pieces);
     });
     
-    $("#price_show1").text(finalPrice());
-
-
 });

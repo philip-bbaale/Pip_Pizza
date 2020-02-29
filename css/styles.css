@@ -61,3 +61,8 @@ input[type=radio],input[type=checkbox]{
     text-align: center;
     float: right;
 }
+.contact_us{
+    height: 150px;
+    width: auto;
+    background-color:  #ffa64d ;
+}

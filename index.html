@@ -170,14 +170,14 @@
 
 
                       <h4>How many would you like.</h4><br>
-                      <input type="number" class="form-control col-md-4" id="pizza_number" value="1" min="1">
+                      <input type="number" class="form-control col-md-4" id="pizza_number" value="0" min="1">
                       <small class="form-text .text-muted text-danger">Note: Order responsibly!</small><br>
                       <button class="btn btn-warning open" type="button">confirm!</button><br><br>
 
                       <h4>Delivery.</h4>
                       <small class="form-text .text-muted ">Would you like to make a delivery.</small>
-                      <button type="button" class="btn btn-light">YES</button>
-                      <button type="button" class="btn btn-light">NO</button>
+                      <button type="button" class="btn btn-light" id="delivery_yes">YES</button>
+                      <button type="button" class="btn btn-light" id="delivery_no" onclick="deliverN()">NO</button>
                       <small class="form-text .text-muted text-danger">Note: Delivery will be KCS:500 and 200+ per km.!</small>
                 </form>
                 
@@ -186,7 +186,7 @@
         </div>
         
         <div class="row contact_us">
-
+          
         </div>
     </div>
 </body>

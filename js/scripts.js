@@ -1,26 +1,32 @@
 var sizePrice, crustPrice, toppingPrice ;
 
-function sizeSelect(size){
-    this.size=size;
+function sizeSelect(sizePricing,sizeSlecting){
+    this.sizePricing=sizePricing;
+    this.sizeSlecting=sizeSlecting;
 }
 
-function crustSelect(crust){
-    this.crust=crust;
+function crustSelect(crustPricing,crustSelecting){
+    this.crustPricing=crustPricing;
+    this.crustSelecting=crustSelecting
 }
 
-function toppingSelect(topping){
-    this.topping=topping;
+function toppingSelect(toppingPricing,toppingSelecting){
+    this.toppingPricing=toppingPricing;
+    this.toppingSelecting=toppingSelect;
 }
 
 function pizzaNumberSelect(pieces){
     this.pieces=pieces;
 }
 
-function finalPrice(){
-    var finalPrice = sizeSelect()+crustSelect()+toppingSelect()*pizzaNumberSelect();
+function finalPriceSubmition(finalPrice){
+    this.finalPrice=finalPrice;
     return finalPrice;
 }
 
+function finalPriceDelivery(deliveryFinalPrice){
+    this.deliveryFinalPrice=deliveryFinalPrice;
+}
 $(document).ready(function(){
 
 
@@ -35,9 +41,11 @@ $(document).ready(function(){
          else if(selectedSize=='large'){
             sizePrice = 1000;
          }
-         size = sizePrice;
-         $("#price_show1").text(size);
-         console.log(size);
+         sizePricing = sizePrice;
+         sizeSlecting = selectedSize;
+         $("#price_show1").text(sizePricing);
+         console.log(sizePricing);
+         console.log(sizeSlecting)
    });
 
 
@@ -61,9 +69,11 @@ $(document).ready(function(){
         else if(selectedCrust=='gluten'){
             crustPrice = 35;
         }
-        crust = crustPrice;
-        $("#price_show1").text(size+crust);
-        console.log(crust);
+        crustPricing = crustPrice;
+        crustSelecting = selectedCrust;
+        $("#price_show1").text(sizePricing+crustPricing);
+        console.log(crustPricing);
+        console.log(crustSelecting);
     });
 
 
@@ -99,17 +109,39 @@ $(document).ready(function(){
         else if(selectedTopping=='spinach'){
             toppingPrice = 60;
         }
-        topping = toppingPrice;
-        $("#price_show1").text(size+crust+topping);
-        console.log(topping);
+        toppingPricing = toppingPrice;
+        toppingSelecting = selectedTopping;
+        $("#price_show1").text(sizePricing+crustPricing+toppingPricing);
+        console.log(toppingPricing);
+        console.log(toppingSelecting);
     });
 
 
     $("#pizza_number").change(function(){
-        var slelectedPizzaNumber = $("#pizza_number").val();
-        pieces = slelectedPizzaNumber;
-        $("#price_show1").text((size+crust+topping)*pieces);
+        var selectedPizzaNumber = $("#pizza_number").val();
+        pieces = selectedPizzaNumber;
+        $("#price_show1").text((sizePricing+crustPricing+toppingPricing)*pieces);
         console.log(pieces);
     });
-    
+
+    $(".open").click(function(){
+        var allPrice = ((sizePricing+crustPricing+toppingPricing)*pieces);
+        finalPrice = allPrice;
+        //finalPrice = new finalPriceSubmition(finalPrice);
+        console.log(finalPrice);
+
+    });
+
+   $("#delivery_no").click(function(){
+    alert("This is your reciept, take a screenshot of it and diaplay it at the counter of Pip Pizza.\n Your pizza order was.\n"+sizeSlecting+"@: "+sizePricing+"\n"+crustSelecting+"@: "+crustPricing+"\n"+toppingSelecting+"@: "+toppingPricing+"\n"+"Number of pizza's: "+pieces+"\n"+"Your total cost is. KCS: "+finalPrice+"\nThank YOu.");
+   });
+
+   $("#delivery_yes").click(function(){
+    var deliveryAddress = prompt("Note: Delivery will be KCS:500 and 200+ per km.!\n Please fill your delivery address.");
+    var addingDelivery = finalPrice+500;
+    deliveryFinalPrice=addingDelivery;
+    console.log(deliveryFinalPrice);
+    console.log(deliveryAddress);
+    alert("Your order will be deliverd at: "+deliveryAddress+"\n"+"Please call: 076522631 for confirmation.\n Your pizza order was.\n"+sizeSlecting+"@: "+sizePricing+"\n"+crustSelecting+"@: "+crustPricing+"\n"+toppingSelecting+"@: "+toppingPricing+"\n"+"Number of pizza's: "+pieces+"\n"+"Your total cost is. KCS: "+deliveryFinalPrice+"\n Please keep a screenshot of this receipt for confirmation on delivery. Thank YOu.");
+   });
 });

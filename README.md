@@ -2,13 +2,13 @@
 
 # Project name:PIP PIZZA.
 
-# App Screenshot.
-<img src="https://github.com/scrupycoco/Pip_Pizza/blob/master/images/screenshot.png">
-
 # Project description:
 > You own a pizza place and as a way of trying to widen your customer base, you decide to create a web application where your customers order different sizes of pizzas with one or more toppings. 
 
 >  Be sure to give your application a suitable catchy name.
+
+# App Screenshot.
+<img src="https://github.com/scrupycoco/Pip_Pizza/blob/master/images/screenshot.png">
 
 # Author(s) information: 
 > Namugera Bbaale Philip

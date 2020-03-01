@@ -142,6 +142,6 @@ $(document).ready(function(){
     deliveryFinalPrice=addingDelivery;
     console.log(deliveryFinalPrice);
     console.log(deliveryAddress);
-    alert("Your order will be deliverd at: "+deliveryAddress+"\n"+"Please call: 076522631 for confirmation.\n Your pizza order was.\n"+sizeSlecting+"@: "+sizePricing+"\n"+crustSelecting+"@: "+crustPricing+"\n"+toppingSelecting+"@: "+toppingPricing+"\n"+"Number of pizza's: "+pieces+"\nDelivery charge@: 500\n"+"Your total cost is. KCS: "+deliveryFinalPrice+"\n Please keep a screenshot of this receipt for confirmation on delivery. Thank YOu.");
+    alert("Your order will be deliverd at: "+deliveryAddress+"\n"+"Please call: 0758657828 for confirmation.\n Your pizza order was.\n"+sizeSlecting+"@: "+sizePricing+"\n"+crustSelecting+"@: "+crustPricing+"\n"+toppingSelecting+"@: "+toppingPricing+"\n"+"Number of pizza's: "+pieces+"\nDelivery charge@: 500\n"+"Your total cost is. KCS: "+deliveryFinalPrice+"\n Please keep a screenshot of this receipt for confirmation on delivery. Thank YOu.");
    });
 });
